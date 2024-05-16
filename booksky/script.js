@@ -5,10 +5,14 @@ var addpopupbutton = document.getElementById("add-popup-button")
 addpopupbutton.addEventListener("click", function () {
     popupoverlay.style.display = "block"
     popupbox.style.display = "block"
+    // popupoverlay.style.display = "none"
+    // popupbox.style.display = "none"
+
+    
 })
 
-cancelpopup.addEventListener("click", function (event) {
-    event.preventDefault()
+var cancelpopup = document.getElementById("cancel-popup")
+cancelpopup.addEventListener("click", function () {
     popupoverlay.style.display = "none"
     popupbox.style.display = "none"
 
@@ -29,7 +33,10 @@ addbook.addEventListener("click", function (event) {
     <p>${bookdescriptioninput.value}</p>
     <button onclick="deletebook(event)">Delete</button>`
     container.append(div)
-
+    
+        popupoverlay.style.display = "none"
+        popupbox.style.display = "none"
+   
 })
 
 function deletebook(event){
